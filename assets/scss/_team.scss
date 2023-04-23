@@ -1,0 +1,85 @@
+.card-container {
+    background-color: $grey94;
+
+    .team-container {
+        padding-top: 122px;
+        padding-bottom: 298px;
+        max-width: 1030px;
+        margin: 0 auto;
+
+        @include media-breakpoint-down(md) {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+
+        .card-parent {
+            display: flex;
+            grid-column-gap: 72px;
+
+            @include media-breakpoint-down(md) {
+                flex-wrap: wrap;
+            }
+        }
+        
+        .card-detail {
+
+            .card-main-heading {
+                position: relative;
+                font-size: 44px;
+                font-weight: $font600;
+                line-height: 51px;
+                color: $darkblue;
+                padding-bottom: 25px;
+                
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 466px;
+                    height: 1px;
+                    bottom: 0;
+                    left: 0;
+                    background: linear-gradient(90deg, rgba(153,207,91,1) 0%, rgba(44,200,121,1) 25%, rgba(22,123,142,1) 50%, rgba(47,50,147,1) 75%);
+
+                    @include media-breakpoint-down(md) {
+                        width: 85%;
+                    }
+    
+                }
+            }
+        }
+    }
+
+    .cards {
+        background: rgba(255, 255, 255, 0.85);
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 6px;
+        padding: 17px 17px 17px 17px;
+        margin-top: 40px;
+        width: 100%;
+        // margin: 0 auto;
+
+        &:nth-child(2) {
+            background-color: $primary;
+
+            .card-heading,
+            .card-para {
+                color: $white;
+            }
+        }
+
+        .card-heading {
+            font-size: 26px;
+            font-weight: $font400;
+            line-height: 30px;
+            margin-top: 17px;
+        }
+
+        .card-para {
+            font-size: 18px;
+            font-weight: $font400;
+            line-height: 21px;
+            font-style: italic;
+            margin-top: 10px;
+        }
+    }
+}

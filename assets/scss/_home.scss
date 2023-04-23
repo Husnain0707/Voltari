@@ -1,0 +1,202 @@
+.home-container {
+
+    .home-bg {
+        background-image: url('../images/home-bg.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 1021px;
+        width: 100%;
+    }
+
+    .v-shape-bg {
+        // background-image: url('../images/home-v-bg-transparent.png');
+        // background-repeat: no-repeat;
+        // background-size: contain;
+        // background-position: center right;
+        position: relative;
+
+        img {
+            height: 1260px;
+            position: absolute;
+            width: 100%;
+            max-width: 63%;
+            right: 0;
+            top: 98px;
+            z-index: 0;
+        }
+    }
+
+    .energy-container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        @include media-breakpoint-up(md) {      
+            padding-top: 310px;
+            padding-bottom: 353px;
+        }
+
+        // .energy-section {
+        //     max-width: 918px;
+        // }
+
+        .energy-heading {
+            color: $blue;
+            font-size: 35px;
+            font-weight: $font600;
+            line-height: 52px;
+
+            @include media-breakpoint-up(md) {      
+                font-size: 44px;   
+            }
+        }
+
+        .energy-para {
+            font-size: 18px;
+            font-weight: $font400;
+            color: $grey;
+            margin-top: 35px;
+            line-height: 21px;
+        }
+
+        .horizental {
+            color: $black;
+            margin: 43px 0 35px 0;
+            border: 1px solid $black;
+        }
+
+        .energy-button {
+            margin-top: 66px;
+            .energy-btn {
+
+                @include gradiant-btn;
+                padding: 10px 25px 10px 25px;
+            }
+        }
+    }
+
+    .charger-container {
+        background-color: $grey94;
+        padding-top: 105px;
+        padding-bottom: 85px;
+
+        .charger-container-row {
+            position: relative;
+            z-index: 1;
+        }
+
+        .charge-cols {
+            &:not(:last-child) {
+                .charge-box {
+                    margin: 0 auto;
+
+                    @include media-breakpoint-down(md) {
+                        margin-bottom: 50px;
+                    }
+                }
+            }
+        }
+
+        .charge-box {
+            max-width: 285px;
+            margin: 0 auto;
+            text-align: center;
+
+            .charge-heading {
+                font-size: 26px;
+                font-weight: $font400;
+                line-height: 30px;
+                color: $darkblue;
+            }
+
+            .charge-para {
+                font-size: 16px;
+                font-weight: $font400;
+                line-height: 18px;
+                margin-top: 22px;
+                color: $darkgrey;
+            }
+
+            .charge-button {
+                margin-top: 44px;
+
+                .charge-btn {
+
+                    @include gradiant-btn;
+                    background-color: $white;
+                    padding: 10px 24px 10px 24px;
+                    color: $grey;
+                }
+            }
+        }
+    }
+
+    .chat-container {
+        background-color: $white;
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        @include media-breakpoint-up(md) {
+            padding-top: 151px;
+            padding-bottom: 181px;
+        }
+
+        .chat-cols {
+            &:not(:last-child) {
+                .chat-box {
+                    margin: 0 auto;
+
+                    @include media-breakpoint-down(md) {
+                        margin-bottom: 50px;
+                    }
+                }
+            }
+        }
+
+        .chat-box {
+            max-width: 201px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .circle {
+            width: 118px;
+            height: 118px;
+            background: linear-gradient(59.99deg, #99CF5B -2.9%, #2CC879 30.02%, #167B8E 67.49%, #2F3293 104.48%);
+            box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            border: none;
+            outline: none;
+            margin: auto;
+        }
+
+        .chat-heading {
+            font-size: 26px;
+            font-weight: $font400;
+            line-height: 30px;
+            color: $darkblue;
+            margin-top: 48px;
+        }
+
+        .chat-para {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18px;
+            color: $grey;
+            margin-top: 6px;
+        }
+
+        .chat-button {
+            margin-top: 27px;
+
+            .chat-btn {
+
+                @include gradiant-btn;
+                background-color: $darkgrey;
+                padding: 6px 35px 6px 35px;
+            }
+        }
+    }
+}
